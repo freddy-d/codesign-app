@@ -14,5 +14,25 @@
 }
 
 #home_logo{
-  font-size: 3.5rem
+  font-size: 3.5rem;
+  padding-top: 1px;
 }
+
+#back_logo{
+  font-size: 3.5rem;
+  padding-top: 3px;
+}
+
+#btn-same-size{
+  width: 12rem
+}
+
+#plus-sign{
+  font-size: 2.5rem
+}
+
+/* .tarefa{
+  display: flex;
+  font-size: 100rem;
+  justify-content: flex-end;
+} */
