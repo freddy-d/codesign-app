@@ -4,13 +4,15 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-  <title>Inspalah - Checklist</title>
+  <title>Checklist</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 
+  <!-- Javascript -->
+  <script src="js/checklist.js"></script>
 
 </head>
 
@@ -22,34 +24,34 @@
     </div>
   </nav>
 
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br><br>
-      <h1 class="header center orange-text">Inspalah</h1>
-      <div class="left">
 
-        <div class="tarefa">
-          <label>
-            <input type="checkbox" class="filled-in center" />
-            <span>ITEM 1</span>
-          </label>
-          <i class="material-icons">close</i>
-        </div>
+  <div class="container">
+    <br><br>
+    <div class="checks_container left">
+      <!-- <p>
+           <label>
+             <input type="checkbox" class="filled-in" checked="checked" />
+             <span>Filled in</span>
+           </label>
+         </p> -->
 
-      </div>
-      <br><br><br>
-
-      <div class="center">
-
-        <i id="plus-sign" class="material-icons">add_circle_outline</i>
-        <br>
-        <input placeholder="Tarefa: " id="first_name" type="text"><i class="material-icons">check</i>
-
-
-      </div>
-
-      <br><br>
     </div>
+
+    <div class="center">
+      <div>
+
+      <i id="plus-sign" class="material-icons" onclick='open_form(this)'>add_circle_outline</i>
+      <br>
+    </div>
+
+      <form id="new_check"> <!-- class="" action="index.html" method="post"> -->
+        <input placeholder="Tarefa: " id="first_name" type="text">
+        <i id="form_check" class="material-icons" onclick='send_form(this)'>check</i>
+      </form>
+
+
+    </div>
+<br><br>
   </div>
 
 

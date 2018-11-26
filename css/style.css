@@ -15,12 +15,12 @@
 
 #home_logo{
   font-size: 3.5rem;
-  padding-top: 1px;
+  padding-top: 4px;
 }
 
 #back_logo{
   font-size: 3.5rem;
-  padding-top: 3px;
+  padding-top: 4px;
 }
 
 #btn-same-size{
@@ -28,11 +28,15 @@
 }
 
 #plus-sign{
+  /* display: flex ; */
   font-size: 2.5rem
 }
 
-/* .tarefa{
-  display: flex;
-  font-size: 100rem;
-  justify-content: flex-end;
-} */
+
+#new_check{
+  display: none;
+}
+
+.pessoa{
+  width:10rem;
+}
