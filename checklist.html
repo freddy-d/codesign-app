@@ -28,30 +28,24 @@
   <div class="container">
     <br><br>
     <div class="checks_container left">
-      <!-- <p>
-           <label>
-             <input type="checkbox" class="filled-in" checked="checked" />
-             <span>Filled in</span>
-           </label>
-         </p> -->
-
     </div>
 
-    <div class="center">
-      <div>
+    <div class="row center">
+      <div class="col s12">
 
-      <i id="plus-sign" class="material-icons" onclick='open_form(this)'>add_circle_outline</i>
-      <br>
-    </div>
+        <i id="plus-sign" class="material-icons" onclick='open_form(this)'>add_circle_outline</i>
+        <br>
+      </div>
 
-      <form id="new_check"> <!-- class="" action="index.html" method="post"> -->
+      <form id="new_check">
+        <!-- class="" action="index.html" method="post"> -->
         <input placeholder="Tarefa: " id="first_name" type="text">
         <i id="form_check" class="material-icons" onclick='send_form(this)'>check</i>
       </form>
 
 
     </div>
-<br><br>
+    <br><br>
   </div>
 
 

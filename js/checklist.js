@@ -81,42 +81,53 @@ function list_checks() {
   container.innerHTML = ''
 
   for (let i = checks.length - 1; i >= 0; i--){
-    let div = document.createElement("div");
-
-    let input = document.createElement("input");
-    input.type = 'checkbox'
-    input.id = 'filled-in-box'
-    input.class = 'filled-in'
-    div.onclick = 'check(this)'
-
-    let span = document.createElement("span");
-    let label = document.createElement("label");
-    label.for='filled-in-box'
-    label.style='font-size: 1.4rem'
-    label.innerHTML = checks[i].text
-
-    if (checks[i].checked){
-      input.checked = 'checked'
-    }
-
-    span.appendChild(label)
-    div.appendChild(input)
-    div.appendChild(span)
-
-    container.appendChild(div)
+    create_one(checks[i].text, checks[i].checked)
   }
 }
 
 
-function check(el){
-
-  let text = el.children[1].innerHTML
+function check(ev){
+  let text = ev.path[0].innerText
   console.log(text);
-  for (let i=0;i<checks.length;i++){
-    if (checks[i].text==text){
+  for (let i = 0; i < checks.length; i++){
+
+    if (checks[i].text == text){
       checks[i].checked = !(checks[i].checked)
       localStorage.setItem('checks', JSON.stringify(checks))
       break;
     }
+
+    list_checks()
   }
+}
+
+
+
+async function create_one(text, checked){
+  let div = document.createElement('div');
+  div.addEventListener('click', check)
+
+  let label = document.createElement("label");
+
+  let input = document.createElement("input");
+  input.type = 'checkbox'
+  input.class = 'filled-in'
+
+
+  let span = document.createElement("span");
+  span.innerHTML = text
+
+
+  if (checked){
+    input.checked = 'checked'
+  }
+  else {
+    input.checked = null
+  }
+
+  label.appendChild(input)
+  label.appendChild(span)
+
+  div.appendChild(label)
+  document.querySelector('.checks_container').appendChild(div)
 }
