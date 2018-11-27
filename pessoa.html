@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Pessoa - Restaurinsper</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+  <!-- Javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="js/pessoa.js"></script>
+
+</head>
+
+<body>
+  <nav class="waves-effect waves-light orange lighten-1" role="navigation">
+    <div>
+      <a id="back_logo" class="material-icons" href="./funcionarios.html">chevron_left</a>
+      <a id="home_logo" class="material-icons brand-logo">assignment_ind</a>
+    </div>
+  </nav>
+
+  <br>
+  <br>
+  <div class="center">
+    <img class="imagem" src="./img/Foto.png" alt="Foto da pessoa">
+  </div>
+
+
+  <div class="center">
+    <h4 id="porcentagem">0 %</h4>
+  </div>
+  <br>
+
+  <!-- questionario para avaliar -->
+  <div class="row">
+    <div class="input-field col s12">
+      <select>
+        <option value="" disabled selected>Escolha um valor:</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <label style="font-size:1rem">Cozinha:</label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <select>
+        <option value="" disabled selected>Escolha um valor:</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <label style="font-size:1rem">Atendimento:</label>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="input-field col s12">
+      <select>
+        <option value="" disabled selected>Escolha um valor:</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <label style="font-size:1rem">Caixa:</label>
+    </div>
+  </div>
+
+  <div class="center">
+    <button class="btn waves-effect waves-light orange " type="submit" name="action" onclick="avaliar()">OK
+      <i class="material-icons right">send</i>
+    </button>
+  </div>
+
+
+
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+</body>
+
+</html>

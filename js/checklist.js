@@ -88,7 +88,7 @@ function list_checks() {
 
 function check(ev){
   let text = ev.path[0].innerText
-  console.log(text);
+  // console.log(text);
   for (let i = 0; i < checks.length; i++){
 
     if (checks[i].text == text){
@@ -125,9 +125,34 @@ async function create_one(text, checked){
     input.checked = null
   }
 
+  let i_el = document.createElement("a");
+  i_el.innerHTML = ' X'
+  i_el.href = '#'
+  i_el.addEventListener('click', deletar_check, true)
+  // i_el.onclick = 'deletar_check(this)'
+  // <i class="material-icons tiny">close</i>
+
   label.appendChild(input)
   label.appendChild(span)
 
   div.appendChild(label)
+  div.appendChild(i_el)
+
   document.querySelector('.checks_container').appendChild(div)
+}
+
+
+
+function deletar_check(el) {
+  // console.log();
+  // // console.log(el.path[0].parentNode.lastElementChild.innerText);
+  let text = el.path[0].parentElement.firstElementChild.children[1].innerHTML
+  for (let index = 0; index < checks.length; index++){
+    if (text == checks[index].text){
+      checks.splice(index,1)
+      break
+    }
+  }
+  localStorage.setItem('checks', JSON.stringify(checks))
+  list_checks()
 }
